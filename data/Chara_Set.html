@@ -5,6 +5,8 @@
 
 <div id=Main>
 	<textarea id=CharaSet>Loading...</textarea>
+	<br>
+	<input type=text id=Hello value="Loading...">
 <div>
 		<input type=button value=Save onclick=SaveFile()>
 		<font color=#ff0000>Please save to data folder</font>
@@ -50,6 +52,8 @@ textarea {
 <script>
 
 var CharaSet = document.getElementById("CharaSet");
+var Hello = document.getElementById("Hello");
+
 var unused_data = "";
 window.onload = function () {
 	printFile();
@@ -67,7 +71,8 @@ function printFile() {
 		for (let i = 1; i < data.length; i++) {
 			Str = Str + data[i];
 		}
-		CharaSet.innerHTML = Str;
+		CharaSet.innerHTML = Str.split("\n\n# Hello User")[0];
+		Hello.value = Str.split("\n\n# Hello User")[1];
 	}
 }
 function SaveFile(){
@@ -76,7 +81,7 @@ function SaveFile(){
 	for (let i = 0; i < StrLi.length; i++) {
 		Str = Str + "- " + StrLi[i] + "\n";
 	}
-	ChangeData = "# Character info\n" + Str
+	ChangeData = "# Character info\n" + Str + "\n# Hello User\n- " + Hello.value;
 	data = unused_data + ChangeData;
 	var fileName = "CharacterSet.md";
 	var fileContent = data;

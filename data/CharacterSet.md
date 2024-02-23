@@ -1,8 +1,8 @@
 # Discord API setting
 - Token
-  - MTEwNjI1NTA5Wlrz_BJrTAggIPQxLz-xQs
+  - MTPQxLz-xQs
 - ID
-  - <@1007488>
+  - <@7488>
 - Model
   - openchat-3.5-7b
 - Server
