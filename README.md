@@ -27,3 +27,6 @@
 # Jan setting
 ![image](https://github.com/LilyRasPi0502/Local-Discord-AI-Bot/assets/115215163/f96a8403-0d32-408e-95c7-8ecf263b44d9)
 ![image](https://github.com/LilyRasPi0502/Local-Discord-AI-Bot/assets/115215163/08ba0351-bdd4-4851-918d-e3ca9930f26d)
+
+# Update log
+- 20240226 新增Hello User提示詞，可輸入角色實際講話口吻
