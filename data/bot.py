@@ -50,11 +50,16 @@ class MyBot(commands.Bot):
 			f = open("data/CharacterSet.md", "r", encoding="utf-8")
 			file = f.read()
 			file = file.split("# Character info")[1]
-			file = file.replace("\n- ", "")
+			files = file.split("\n\n# Hello User\n")
+			file = files[0].replace("\n- ", "")
 			prompt = [
 				{
 					"content": f"Time:[{Get_Time()}] {file}",
 					"role": "system"
+				},
+				{
+					"content": f"{files[1]}",
+					"role": "assistant"
 				}
 			]
 			UserMSG = []
@@ -78,7 +83,7 @@ class MyBot(commands.Bot):
 	
 			UserMSG.reverse()
 			prompt = prompt + UserMSG
-			#async with message.channel.typing():
+			#print(prompt)
 			Str = self.Chat.chat(prompt)
 			await message.reply(Str)
 			print(f"[{Get_Time()}] Reply message to {str(message.guild)}.{str(message.channel)}.{message.author.display_name}: {str(Str)}")
