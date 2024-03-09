@@ -10,7 +10,7 @@
 - Install [Jan](https://github.com/janhq/jan)
   - Please open API port
 - Run `python -m pip install -U py-cord` Command
-- Open setup.exe setUp your bot
+- Open setup.exe setUp your bot or Open data/CharacterSet.md
   - Save CharacterSet.md to data folder
 - Open Launcher.exe used your ai bot
 
@@ -20,7 +20,7 @@
   - [Jan安裝教學中文版-零度解說](https://www.youtube.com/watch?v=gf8Phs2YXWU)
   - 需開啟API模式
 - 在命令提示字元運行`python -m pip install -U py-cord`指令
-- 開啟setup.exe設定您的機器人
+- 開啟setup.exe設定您的機器人 或 修改data/CharacterSet.md
   - 將CharacterSet.md檔案儲存至data資料夾內
 - 開啟Launcher.exe使用您的機器人
 
