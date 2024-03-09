@@ -76,10 +76,10 @@ class MyBot(commands.Bot):
 					if str(MSG.author).find(str(self.user)) != -1:
 						UserMSG.append({"content": MSG.content, "role": "assistant"})
 					else:
-						UserMSG.append({"content": f"{str(MSG.guild)}.{str(MSG.channel)}{str(MSG.author.display_name)}： {str(MSG.content)}", "role": "user"})	
+						UserMSG.append({"content": f"{str(MSG.guild)}.{str(MSG.channel)}{str(MSG.author.display_name)}： {str(MSG.content).replace(bot_ID, '')}", "role": "user"})	
 	
 			else:
-				UserMSG.append({"content": f"{str(message.guild)}.{str(message.channel)}{str(message.author.display_name)}： {str(message.content)}", "role": "user"})	
+				UserMSG.append({"content": f"{str(message.guild)}.{str(message.channel)}{str(message.author.display_name)}： {str(message.content).replace(bot_ID, '')}", "role": "user"})	
 	
 			UserMSG.reverse()
 			prompt = prompt + UserMSG
