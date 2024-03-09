@@ -10,9 +10,9 @@
 - Install [Jan](https://github.com/janhq/jan)
   - Please open API port
 - Run `python -m pip install -U py-cord` Command
-- Open setup.exe setUp your bot or Open data/CharacterSet.md
+- Open setup.exe setUp your bot or edit data/CharacterSet.md
   - Save CharacterSet.md to data folder
-- Open Launcher.exe used your ai bot
+- Open Launcher.exe(or run Launcher.py) used your ai bot
 
 # 如何使用?
 - 安裝python3.7以上環境
@@ -22,7 +22,7 @@
 - 在命令提示字元運行`python -m pip install -U py-cord`指令
 - 開啟setup.exe設定您的機器人 或 修改data/CharacterSet.md
   - 將CharacterSet.md檔案儲存至data資料夾內
-- 開啟Launcher.exe使用您的機器人
+- 開啟Launcher.exe(或運行 Launcher.py)使用您的機器人
 
 # Jan setting
 ![image](https://github.com/LilyRasPi0502/Local-Discord-AI-Bot/assets/115215163/f96a8403-0d32-408e-95c7-8ecf263b44d9)
