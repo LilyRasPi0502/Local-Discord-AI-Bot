@@ -31,3 +31,4 @@
 # Update log
 - 20240226 新增Hello User提示詞，可輸入角色實際講話口吻
 - 20240309 對Bot.py及Chat.py進行微調 //Bot.py隱藏使用者輸入之Bot_ID Chat.py新增StreamChat方法提供改寫
+- 20240321 對Bot.py與Chat.py及CharacterSet.md進行微調 //Bot.py修改Bot_ID設定與添加提示詞輸入(亂數決定) Chat.py微調StreamChat方法提供改寫 CharacterSet.md新增初始輸出範本量
