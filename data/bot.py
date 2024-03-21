@@ -1,5 +1,6 @@
 import discord
 
+from random import *
 from discord.ext import commands
 from discord.ext import tasks
 from datetime import *
@@ -46,19 +47,22 @@ class MyBot(commands.Bot):
 			Send = False
 
 	async def chat(self, message):
+		if str(message.content).find("ReAI") != -1:
+			await self.CloseSelf()
 		async with message.channel.typing():
 			f = open("data/CharacterSet.md", "r", encoding="utf-8")
 			file = f.read()
 			file = file.split("# Character info")[1]
-			files = file.split("\n\n# Hello User\n")
+			files = file.split("\n\n# Hello User\n- ")
 			file = files[0].replace("\n- ", "")
+			Ass = files[1].split("\n- ")
 			prompt = [
 				{
 					"content": f"Time:[{Get_Time()}] {file}",
 					"role": "system"
 				},
 				{
-					"content": f"{files[1]}",
+					"content": f"{Ass[randrange(len(Ass))]}",
 					"role": "assistant"
 				}
 			]
@@ -76,10 +80,10 @@ class MyBot(commands.Bot):
 					if str(MSG.author).find(str(self.user)) != -1:
 						UserMSG.append({"content": MSG.content, "role": "assistant"})
 					else:
-						UserMSG.append({"content": f"{str(MSG.guild)}.{str(MSG.channel)}{str(MSG.author.display_name)}： {str(MSG.content).replace(bot_ID, '')}", "role": "user"})	
+						UserMSG.append({"content": f"{str(MSG.guild)}.{str(MSG.channel)}{str(MSG.author.display_name)}： {MSG.content}", "role": "user"})	
 	
 			else:
-				UserMSG.append({"content": f"{str(message.guild)}.{str(message.channel)}{str(message.author.display_name)}： {str(message.content).replace(bot_ID, '')}", "role": "user"})	
+				UserMSG.append({"content": f"{str(message.guild)}.{str(message.channel)}{str(message.author.display_name)}： {message.content}", "role": "user"})	
 	
 			UserMSG.reverse()
 			prompt = prompt + UserMSG
